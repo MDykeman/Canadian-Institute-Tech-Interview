@@ -1,0 +1,14 @@
+a {
+  color: blue;
+  text-decoration: none;
+  text-transform: uppercase;
+  cursor: help;
+}
+
+a:before {
+  content: ">";
+}
+
+a:after {
+  content: "<";
+}
