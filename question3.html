@@ -6,28 +6,32 @@
   <!-- <script src="question3.js"></script> -->
 </head>
 <body>
-  <div id="a">
-     <div id="b">
+
+  <div id="a" class="starter-div">
+     <div id="b" class="starter-div">
      </div>
    </div>
 
-   <script>
 
-   function appendChildren() {
-var allDivs = document.getElementsByTagName("div");
-
-var l = allDivs.length;
-for (var i = 0; i < l; i++) {
-var newDiv = document.createElement("div");
-decorateDiv(newDiv);
-allDivs[i].appendChild(newDiv);
-}
-}
-// Mock of decorateDiv function for testing purposes
-function decorateDiv(div) {
-div.style.color = "purple";
-}
-
-   </script>
 </body>
+
+  <script>
+
+  function appendChildren() {
+        var allDivs = document.getElementsByClassName("starter-div");
+            for (var i = 0 ; i < allDivs.length ; i++) {
+                var newDiv = document.createElement("div");
+                decorateDiv(newDiv);
+                allDivs[i].appendChild(newDiv);
+            }
+        }
+        function decorateDiv(div) {
+          var t = document.createTextNode("Newly Created Div");
+          div.style.color = "green"; 
+            div.appendChild(t);
+        }
+        appendChildren();
+
+  </script>
+
 </html>
